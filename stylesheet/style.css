@@ -1,0 +1,650 @@
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#121212;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:#1c1c1c;
+    padding:20px 50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+    color:#ff6b00;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ff6b00;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    height:80vh;
+
+    background-image:url("images/banner.jpg");
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+    z-index:1;
+
+    padding-left:80px;
+    max-width:600px;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
+
+.hero-btn{
+    background:#ff6b00;
+    border:none;
+
+    padding:15px 30px;
+    color:white;
+
+    border-radius:8px;
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+    background:#ff8533;
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.section-title{
+    margin:60px 5% 20px;
+    font-size:2rem;
+}
+
+/* =========================
+   RECOMMENDED ANIME
+========================= */
+
+.recommended-grid{
+    width:90%;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+}
+
+.anime-card{
+    position:relative;
+    overflow:hidden;
+
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.anime-card img{
+    height:320px;
+    object-fit:cover;
+
+    transition:0.4s;
+}
+
+.overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+
+    width:100%;
+    padding:20px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,0.95)
+    );
+
+    transform:translateY(100%);
+    transition:0.4s;
+}
+
+.overlay h3{
+    margin-bottom:8px;
+}
+
+.overlay p{
+    color:#cccccc;
+    font-size:0.9rem;
+}
+
+.anime-card:hover img{
+    transform:scale(1.1);
+    filter:brightness(40%);
+}
+
+.anime-card:hover .overlay{
+    transform:translateY(0);
+}
+
+/* =========================
+   POPULARITY RANKING
+========================= */
+
+.ranking-section{
+    width:90%;
+    margin:80px auto;
+}
+
+.ranking-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+}
+
+.rank-card{
+    background:#1f1f1f;
+    border-radius:12px;
+    overflow:hidden;
+
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.rank-card:hover{
+    transform:translateY(-8px);
+}
+
+.rank-number{
+    font-size:1.6rem;
+    font-weight:bold;
+    color:#ff6b00;
+
+    padding:10px;
+}
+
+.rank-card img{
+    height:250px;
+    object-fit:cover;
+}
+
+.rank-card p{
+    text-align:center;
+    padding:15px;
+
+    min-height:70px;
+}
+
+/* =========================
+   BOTTOM RECOMMENDATION
+========================= */
+
+.bottom-section{
+    width:90%;
+    margin:80px auto;
+}
+
+.bottom-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.bottom-card{
+    background:#1f1f1f;
+    border-radius:12px;
+    overflow:hidden;
+
+    transition:0.3s;
+}
+
+.bottom-card:hover{
+    transform:scale(1.05);
+}
+
+.bottom-card img{
+    height:250px;
+    object-fit:cover;
+}
+
+.bottom-card h3{
+    padding:15px;
+    text-align:center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#1c1c1c;
+    margin-top:80px;
+
+    padding:30px;
+    text-align:center;
+}
+
+footer p{
+    color:#999;
+}
+
+/* =========================
+   ANIME DETAIL PAGE
+========================= */
+
+.detail-banner{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.detail-content{
+    width:90%;
+    margin:40px auto;
+}
+
+.detail-content h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.detail-content p{
+    color:#d0d0d0;
+    line-height:1.8;
+}
+
+.info-box{
+    margin-top:30px;
+
+    background:#1f1f1f;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+    display:inline-block;
+
+    background:#ff6b00;
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff8533;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:1200px){
+
+    .recommended-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .ranking-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .bottom-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-content{
+        padding:40px;
+    }
+
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .recommended-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .ranking-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width:500px){
+
+    .recommended-grid{
+        grid-template-columns:1fr;
+    }
+
+    .ranking-grid{
+        grid-template-columns:1fr;
+    }
+
+    .bottom-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+}
+
+
+
+
+
+/* ======================
+DETAIL PAGE
+====================== */
+
+.detail-hero{
+    width:90%;
+    margin:40px auto;
+
+    position:relative;
+}
+
+.detail-hero img{
+    width:100%;
+    height:550px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+}
+
+.detail-overlay{
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+
+    padding:50px;
+
+    border-radius:15px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,0.95)
+    );
+}
+
+.detail-overlay h1{
+    font-size:4rem;
+
+    margin-bottom:10px;
+}
+
+.genre{
+    font-size:1.2rem;
+
+    margin-bottom:10px;
+
+    color:#dddddd;
+}
+
+.rating{
+    color:#ffc107;
+
+    font-size:1.5rem;
+
+    font-weight:bold;
+}
+
+.detail-content{
+    width:90%;
+
+    margin:60px auto;
+}
+
+.detail-content h2{
+    margin-bottom:20px;
+
+    color:#ff6b00;
+}
+
+.detail-content p{
+    line-height:1.8;
+
+    color:#d0d0d0;
+}
+
+/* Characters */
+
+.character-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+}
+
+.character-card{
+    background:#1f1f1f;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:0.3s;
+}
+
+.character-card:hover{
+    transform:translateY(-8px);
+}
+
+.character-card img{
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+}
+
+.character-card h3{
+    text-align:center;
+
+    padding:15px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .detail-overlay h1{
+        font-size:2.5rem;
+    }
+
+    .character-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    .character-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+
+
+
+/* ======================
+   SUBSCRIPTION PAGE
+====================== */
+
+main{
+    padding:40px;
+}
+
+main h1{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:3rem;
+}
+
+.plans{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.plan-card{
+    width:400px;
+    padding:40px;
+    border:2px solid #ddd;
+    border-radius:15px;
+    text-align:center;
+    background:white;
+    transition:0.3s;
+}
+
+.plan-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.plan-card h2{
+    margin-bottom:30px;
+}
+
+.price{
+    font-size:3rem;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+.price span{
+    font-size:1.2rem;
+    color:gray;
+}
+
+.plan-card button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:black;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:1rem;
+    margin-bottom:30px;
+}
+
+.plan-card button:hover{
+    background:#333;
+}
+
+.plan-card ul{
+    text-align:left;
+    line-height:2;
+}
+
+.note-section{
+    margin-top:80px;
+    padding:30px;
+    border-top:2px solid #ddd;
+}
+
+.note-section h2{
+    margin-bottom:20px;
+}
+
+.note-section ul{
+    line-height:2;
+}

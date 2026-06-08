@@ -97,32 +97,9 @@ nav a:hover{
 .hero-content h1{
     font-size:4rem;
     margin-bottom:20px;
-}
-
-.hero-content p{
-    font-size:1.2rem;
-    margin-bottom:25px;
-}
-
-.hero-btn{
-    background:#ff6b00;
-    border:none;
-
-    padding:15px 30px;
-    color:white;
-
-    border-radius:8px;
-    cursor:pointer;
-
-    transition:0.3s;
-}
-
-.hero-btn:hover{
-    background:#ff8533;
-}
-
+} 
 /* =========================
-   TITLES
+    TITLES
 ========================= */
 
 .section-title{
@@ -131,7 +108,7 @@ nav a:hover{
 }
 
 /* =========================
-   RECOMMENDED ANIME
+    RECOMMENDED ANIME
 ========================= */
 
 .recommended-grid{
@@ -143,12 +120,21 @@ nav a:hover{
     gap:25px;
 }
 
+/* 核心修复：精准补上当 .anime-card 外面包裹了 <a> 标签后的链接块级容器声明 */
+.recommended-grid > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
 .anime-card{
     position:relative;
     overflow:hidden;
 
     border-radius:12px;
     cursor:pointer;
+    width: 100%; /* 确保填满链接容器 */
 }
 
 .anime-card img{
@@ -563,88 +549,101 @@ DETAIL PAGE
 
 
 
-/* ======================
-   SUBSCRIPTION PAGE
-====================== */
+/* ==========================================================================
+   5. 订阅页特定样式 (专为 subscription.html 定制，绝对不影响首页)
+   ========================================================================== */
 
-main{
-    padding:40px;
+/* 订阅页专属大白衬底外框 */
+.sub-page-outer-box {
+    max-width: 1100px;
+    margin: 50px auto;
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    padding: 50px 40px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
-main h1{
-    text-align:center;
-    margin-bottom:50px;
-    font-size:3rem;
+/* 页面大标题 */
+.sub-page-outer-box h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: normal;
+    color: #000000;
 }
 
-.plans{
-    display:flex;
-    justify-content:center;
-    gap:50px;
-    flex-wrap:wrap;
+/* 卡片横向并排的 Flexbox 容器 */
+.sub-page-outer-box .sub-cards-flex {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.plan-card{
-    width:400px;
-    padding:40px;
-    border:2px solid #ddd;
-    border-radius:15px;
-    text-align:center;
-    background:white;
-    transition:0.3s;
+/* 每一个 Subscription 计划的独立卡片（完美还原直角骨架风格） */
+.sub-page-outer-box .sub-plan-card {
+    background: #ffffff;
+    border: 1px solid #c0c0c0;
+    border-radius: 8px;
+    padding: 40px 30px;
+    width: 280px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, border-color 0.2s;
+    text-align: center;
 }
 
-.plan-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+/* 滑过卡片时的微妙浮动与加深边框效果（满足 Hover 互动标准） */
+.sub-page-outer-box .sub-plan-card:hover {
+    transform: translateY(-4px);
+    border-color: #666666;
 }
 
-.plan-card h2{
-    margin-bottom:30px;
+/* 卡片内动漫方案名字 */
+.sub-page-outer-box .sub-plan-card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #000000;
+    font-weight: 600;
 }
 
-.price{
-    font-size:3rem;
-    font-weight:bold;
-    margin-bottom:30px;
+/* 价格字体 */
+.sub-page-outer-box .sub-plan-card .price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
 }
 
-.price span{
-    font-size:1.2rem;
-    color:gray;
+/* 服务特权无序列表排版 */
+.sub-page-outer-box .sub-plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    text-align: left;
 }
 
-.plan-card button{
-    width:100%;
-    padding:15px;
-    border:none;
-    background:black;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:1rem;
-    margin-bottom:30px;
+.sub-page-outer-box .sub-plan-card ul li {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
-.plan-card button:hover{
-    background:#333;
+/* 订阅页专属直角灰色按钮（绝对不和首页任何按钮冲突） */
+.sub-page-outer-box .btn-subscribe {
+    background-color: #f0f0f0;
+    color: #333333;
+    border: 1px solid #b5b5b5;
+    padding: 10px 24px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
 }
 
-.plan-card ul{
-    text-align:left;
-    line-height:2;
-}
-
-.note-section{
-    margin-top:80px;
-    padding:30px;
-    border-top:2px solid #ddd;
-}
-
-.note-section h2{
-    margin-bottom:20px;
-}
-
-.note-section ul{
-    line-height:2;
+.sub-page-outer-box .btn-subscribe:hover {
+    background-color: #e2e2e2;
+    border-color: #888888;
 }

@@ -1,233 +1,380 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anime Stream - Homepage</title>
-    <link rel="stylesheet" href="stylesheet/style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="stylesheet/style.css" />
+  </head>
+  <body>
     <header class="main-nav">
-        <a href="index.html" class="logo">Anime</a>
-        <nav aria-label="Main Navigation">
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home Page</a></li>
-                <li><a href="subscription.html">Subscription page</a></li>
-            </ul>
-        </nav>
-        <div class="nav-auth">
-            <a href="#" class="btn-login">Log in / Sign up</a>
-        </div>
+      <a href="index.html" class="logo">Anime</a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home Page</a></li>
+          <li><a href="subscription.html">Subscription page</a></li>
+        </ul>
+      </nav>
+      <div class="nav-auth">
+        <a href="#" class="btn-login">Log in / Sign up</a>
+      </div>
     </header>
 
-    <a href="Anime-Detail/Naruto.html#Naruto">
-        <div class="anime-card">
-            <img src="images/naruto.jpg" alt="火影忍者">
-            <div class="overlay">
-                <h3>火影忍者</h3>
-                <p>热血 · 忍者</p>
-            </div>
+    <section class="hero-section">
+      <div class="hero-buttons">
+        <button onclick="showAnime('yourname')">你的名字</button>
+
+        <button onclick="showAnime('weathering')">天气之子</button>
+
+        <button onclick="showAnime('suzume')">铃芽之旅</button>
+
+        <button onclick="showAnime('ghost')">夏日幽灵</button>
+      </div>
+
+      <!-- 你的名字 -->
+
+      <div id="yourname" class="hero-content active">
+        <div class="hero-text">
+          <h1>你的名字</h1>
+
+          <p>两位从未见面的高中生， 因神秘力量交换身体， 命运从此紧紧相连。</p>
+
+          <a href="yourname.html" class="watch-btn"> </a>
         </div>
+
+        <div class="hero-video">
+          <video autoplay muted loop>
+            <source src="videos/yourname.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <!-- 天气之子 -->
+
+      <div id="weathering" class="hero-content">
+        <div class="hero-text">
+          <h1>天气之子</h1>
+
+          <p>拥有改变天气能力的少女， 与离家少年相遇后展开奇幻故事。</p>
+
+          <a href="weathering.html" class="watch-btn"> </a>
+        </div>
+
+        <div class="hero-video">
+          <video autoplay muted loop>
+            <source src="videos/weathering.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <!-- 铃芽之旅 -->
+
+      <div id="suzume" class="hero-content">
+        <div class="hero-text">
+          <h1>铃芽之旅</h1>
+
+          <p>少女铃芽踏上关闭灾难之门的旅程， 穿越日本各地寻找希望。</p>
+
+          <a href="suzume.html" class="watch-btn"> </a>
+        </div>
+
+        <div class="hero-video">
+          <video autoplay muted loop>
+            <source src="videos/suzume.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
+      <!-- 夏日幽灵 -->
+
+      <div id="ghost" class="hero-content">
+        <div class="hero-text">
+          <h1>夏日幽灵</h1>
+
+          <p>三位少年少女寻找传说中的幽灵， 发现生命真正的意义。</p>
+
+          <a href="ghost.html" class="watch-btn"> </a>
+        </div>
+
+        <div class="hero-video">
+          <video autoplay muted loop>
+            <source src="videos/ghost.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <a href="Anime-Detail/Naruto.html">
+      <div class="anime-card">
+        <img src="images/NARUTO-bg.jpg" alt="火影忍者" />
+        <div class="overlay">
+          <h3>火影忍者</h3>
+          <p>热血 · 忍者</p>
+        </div>
+      </div>
     </a>
 
     <a href="Anime-Detail/Deathnote.html">
-        <div class="anime-card">
-            <img src="images/deathnote.jpg" alt="死亡笔记">
-            <div class="overlay">
-                <h3>死亡笔记</h3>
-                <p>悬疑 · 推理</p>
-            </div>
+      <div class="anime-card">
+        <img src="images/Death Note-bg.jpg" alt="死亡笔记" />
+        <div class="overlay">
+          <h3>死亡笔记</h3>
+          <p>悬疑 · 推理</p>
         </div>
+      </div>
     </a>
 
     <a href="Anime-Detail/Free.html">
-        <div class="anime-card">
-            <img src="images/free.jpg" alt="Free!男子游泳部">
-            <div class="overlay">
-                <h3>Free!男子游泳部</h3>
-                <p>运动 · 青春</p>
-            </div>
+      <div class="anime-card">
+        <img src="images/Free-bg.jpg" alt="Free!男子游泳部" />
+        <div class="overlay">
+          <h3>Free!男子游泳部</h3>
+          <p>运动 · 青春</p>
         </div>
+      </div>
     </a>
 
     <a href="Anime-Detail/Haikyuu.html">
-        <div class="anime-card">
-            <img src="images/haikyuu.jpg" alt="排球少年">
-            <div class="overlay">
-                <h3>排球少年</h3>
-                <p>运动 · 热血</p>
-            </div>
+      <div class="anime-card">
+        <img src="images/Haikyu!!-bg.jpg" alt="排球少年" />
+        <div class="overlay">
+          <h3>排球少年</h3>
+          <p>运动 · 热血</p>
         </div>
+      </div>
     </a>
 
     <a href="Anime-Detail/Chainsawman.html">
-        <div class="anime-card">
-            <img src="images/chainsawman.jpg" alt="电锯人">
-            <div class="overlay">
-                <h3>电锯人</h3>
-                <p>奇幻 · 战斗</p>
-            </div>
+      <div class="anime-card">
+        <img src="images/Chainsaw Man-bg.jpg" alt="电锯人" />
+        <div class="overlay">
+          <h3>电锯人</h3>
+          <p>奇幻 · 战斗</p>
         </div>
+      </div>
     </a>
 
     <a href="Anime-Detail/Violet.html">
-        <div class="anime-card">
-            <img src="images/violet.jpg" alt="紫罗兰永恒花园">
-            <div class="overlay">
-                <h3>紫罗兰永恒花园</h3>
-                <p>治愈 · 感动</p>
-            </div>
+      <div class="anime-card">
+        <img src="images/Violet Evergarden-bg.jpg" alt="紫罗兰永恒花园" />
+        <div class="overlay">
+          <h3>紫罗兰永恒花园</h3>
+          <p>治愈 · 感动</p>
         </div>
+      </div>
     </a>
 
     <a href="Anime-Detail/Gintama.html">
-        <div class="anime-card">
-            <img src="images/gintama.jpg" alt="银魂">
-            <div class="overlay">
-                <h3>银魂</h3>
-                <p>搞笑 · 战斗</p>
-            </div>
+      <div class="anime-card">
+        <img src="images/Gintama-bg.jpg" alt="银魂" />
+        <div class="overlay">
+          <h3>银魂</h3>
+          <p>搞笑 · 战斗</p>
         </div>
+      </div>
     </a>
 
     <a href="Anime-Detail/Aot.html">
-        <div class="anime-card">
-            <img src="images/aot.jpg" alt="进击的巨人">
-            <div class="overlay">
-                <h3>进击的巨人</h3>
-                <p>黑暗 · 热血</p>
-            </div>
+      <div class="anime-card">
+        <img src="images/Attack on Titan-bg 2.jpg" alt="进击的巨人" />
+        <div class="overlay">
+          <h3>进击的巨人</h3>
+          <p>黑暗 · 热血</p>
         </div>
+      </div>
     </a>
 
     <a href="Anime-Detail/Demonslayer.html">
-        <div class="anime-card">
-            <img src="images/demonslayer.jpg" alt="鬼灭之刃">
-            <div class="overlay">
-                <h3>鬼灭之刃</h3>
-                <p>战斗 · 冒险</p>
-            </div>
+      <div class="anime-card">
+        <img src="images/Demon Slayer-bg.jpg" alt="鬼灭之刃" />
+        <div class="overlay">
+          <h3>鬼灭之刃</h3>
+          <p>战斗 · 冒险</p>
         </div>
+      </div>
     </a>
 
     <a href="Anime-Detail/Jujutsu.html">
-        <div class="anime-card">
-            <img src="images/jujutsu.jpg" alt="咒术回战">
-            <div class="overlay">
-                <h3>咒术回战</h3>
-                <p>咒术 · 战斗</p>
-            </div>
+      <div class="anime-card">
+        <img src="images/Jujutsu Kaisen-bg.jpg" alt="咒术回战" />
+        <div class="overlay">
+          <h3>咒术回战</h3>
+          <p>咒术 · 战斗</p>
         </div>
+      </div>
     </a>
 
     <section class="ranking-section">
+      <h2>Anime Homepage – Popularity Ranking</h2>
 
-        <h2>Anime Homepage – Popularity Ranking</h2>
-
-        <div class="ranking-grid">
-
-            <div class="rank-card">
-                <span class="rank-number">1</span>
-                <img src="images/onepiece.jpg" alt="海贼王">
-                <h3>海贼王</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">2</span>
-                <img src="images/bungou.jpg" alt="文豪野犬">
-                <h3>文豪野犬</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">3</span>
-                <img src="images/tsurune.jpg" alt="弦音">
-                <h3>弦音</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">4</span>
-                <img src="images/oshinoko.jpg" alt="我推的孩子">
-                <h3>【我推的孩子】</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">5</span>
-                <img src="images/wotakoi.jpg" alt="阿宅的恋爱真难">
-                <h3>阿宅的恋爱真难</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">6</span>
-                <img src="images/horimiya.jpg" alt="堀与宫村">
-                <h3>堀与宫村</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">7</span>
-                <img src="images/takopi.jpg" alt="章鱼P的原罪">
-                <h3>章鱼P的原罪</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">8</span>
-                <img src="images/hikaru.jpg" alt="光死去的夏天">
-                <h3>光死去的夏天</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">9</span>
-                <img src="images/april.jpg" alt="四月是你的谎言">
-                <h3>四月是你的谎言</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">10</span>
-                <img src="images/tamako.jpg" alt="玉子爱情故事">
-                <h3>玉子爱情故事</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">11</span>
-                <img src="images/anohana.jpg" alt="未闻花名">
-                <h3>未闻花名</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">12</span>
-                <img src="images/nonhuman.jpg" alt="嫁给非人类">
-                <h3>嫁给非人类</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">13</span>
-                <img src="images/komi.jpg" alt="古见同学有交流障碍症">
-                <h3>古见同学有交流障碍症</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">14</span>
-                <img src="images/hotarubi.jpg" alt="萤火之森">
-                <h3>萤火之森</h3>
-            </div>
-
-            <div class="rank-card">
-                <span class="rank-number">15</span>
-                <img src="images/tunnel.jpg" alt="通往夏天的隧道，再见的出口">
-                <h3>通往夏天的隧道，再见的出口</h3>
-            </div>
-
+      <div class="ranking-grid">
+        <div class="rank-card">
+          <span class="rank-number">1</span>
+          <img src="images/onepiece.jpg" alt="海贼王" />
+          <h3>海贼王</h3>
         </div>
 
+        <div class="rank-card">
+          <span class="rank-number">2</span>
+          <img src="images/bungou.jpg" alt="文豪野犬" />
+          <h3>文豪野犬</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">3</span>
+          <img src="images/tsurune.jpg" alt="弦音" />
+          <h3>弦音</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">4</span>
+          <img src="images/oshinoko.jpg" alt="我推的孩子" />
+          <h3>【我推的孩子】</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">5</span>
+          <img src="images/wotakoi.jpg" alt="阿宅的恋爱真难" />
+          <h3>阿宅的恋爱真难</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">6</span>
+          <img src="images/horimiya.jpg" alt="堀与宫村" />
+          <h3>堀与宫村</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">7</span>
+          <img src="images/takopi.jpg" alt="章鱼P的原罪" />
+          <h3>章鱼P的原罪</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">8</span>
+          <img src="images/hikaru.jpg" alt="光死去的夏天" />
+          <h3>光死去的夏天</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">9</span>
+          <img src="images/april.jpg" alt="四月是你的谎言" />
+          <h3>四月是你的谎言</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">10</span>
+          <img src="images/tamako.jpg" alt="玉子爱情故事" />
+          <h3>玉子爱情故事</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">11</span>
+          <img src="images/Kuro Shitsuji.jpg" alt="Kuro Shitsuji" />
+          <h3>Kuro Shitsuji</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">12</span>
+          <img src="images/nonhuman.jpg" alt="嫁给非人类" />
+          <h3>嫁给非人类</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">13</span>
+          <img src="images/komi.jpg" alt="古见同学有交流障碍症" />
+          <h3>古见同学有交流障碍症</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">14</span>
+          <img src="images/hotarubi.jpg" alt="萤火之森" />
+          <h3>萤火之森</h3>
+        </div>
+
+        <div class="rank-card">
+          <span class="rank-number">15</span>
+          <img src="images/tunnel.jpg" alt="通往夏天的隧道，再见的出口" />
+          <h3>通往夏天的隧道，再见的出口</h3>
+        </div>
+      </div>
     </section>
-    
-    <div class="bottom-card">冰上的尤里</div>
 
-    <div class="bottom-card">干物妹！小埋</div>
+    <section class="featured-show">
+      <div class="featured-image">
+        <img src="images/Bocchi the Rock!.jpg" alt="孤独摇滚" />
+      </div>
 
-    <div class="bottom-card">夏目友人帐</div>
+      <div class="featured-info">
+        <h2>孤独摇滚！</h2>
 
-    <div class="bottom-card">黑执事</div>
+        <p class="featured-genre">音乐 · 校园 · 喜剧</p>
 
-</body>
+        <p class="featured-description">
+          社交恐惧症少女后藤一里梦想成为闪耀的吉他英雄。
+          一次偶然的机会，她加入了「结束乐队」，
+          与伙伴们一起在音乐与成长的道路上不断前进。
+        </p>
+      </div>
+    </section>
+
+    <section class="featured-anime">
+      <h2>More Recommendations</h2>
+
+      <div class="featured-grid">
+        <!-- Natsume's Book of Friends -->
+
+        <div class="featured-card">
+          <img
+            src="images/Natsume's Book of Friends.jpg"
+            alt="Natsume's Book of Friends"
+          />
+
+          <div class="featured-overlay">
+            <h3>Natsume's Book of Friends</h3>
+          </div>
+        </div>
+
+        <!-- Himouto! Umaru-chan-->
+
+        <div class="featured-card">
+          <img src="images/Himouto! Umaru-chan.jpg" alt="Himouto! Umaru-chan" />
+
+          <div class="featured-overlay">
+            <h3>Himouto! Umaru-chan</h3>
+          </div>
+        </div>
+
+        <!-- K-ON! -->
+
+        <div class="featured-card">
+          <img src="images/K-ON!.jpg" alt="K-ON!" />
+
+          <div class="featured-overlay">
+            <h3>K-ON!</h3>
+          </div>
+        </div>
+
+        <!-- Yuri!!! on ICE -->
+
+        <div class="featured-card">
+          <img src="images/Yuri!!! on ICE.jpg" alt="Yuri!!! on ICE" />
+
+          <div class="featured-overlay">
+            <h3>Yuri!!! on ICE</h3>
+          </div>
+        </div>
+
+        <!-- Kuro Shitsuji -->
+
+        <div class="featured-card">
+          <img src="images/未闻花名<.jpg" alt="未闻花名" />
+
+          <div class="featured-overlay">
+            <h3>Kuro Shitsuji</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

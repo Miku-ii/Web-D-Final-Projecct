@@ -235,6 +235,7 @@ nav a:hover{
 
 .anime-card{
     position:relative;
+    height: 500px;
     overflow:hidden;
 
     border-radius:12px;
@@ -243,7 +244,6 @@ nav a:hover{
 }
 
 .anime-card img{
-    height:320px;
     object-fit:cover;
 
     transition:0.4s;
@@ -739,7 +739,7 @@ footer p{
 
 
 /* ==========================================================================
-   5. 订阅页特定样式 (专为 subscription.html 定制，绝对不影响首页)
+   5. 订阅页特定样式
    ========================================================================== */
 
 /* 订阅页专属大白衬底外框 */

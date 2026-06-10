@@ -1,5 +1,5 @@
 /* =========================
-   GLOBAL
+    GLOBAL
 ========================= */
 
 *{
@@ -25,8 +25,17 @@ img{
 }
 
 /* =========================
-   HEADER
+    HEADER
 ========================= */
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:#ff6b00;
+}
 
 header{
     background:#1c1c1c;
@@ -63,19 +72,21 @@ nav a:hover{
 
 
 /* =========================
-   HERO SECTION
+    HERO SECTION
 ========================= */
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ff6b00;
+}
 
 .hero-section{
     width:90%;
     margin:40px auto;
-}
-
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    margin-bottom:25px;
 }
 
 .hero-buttons button{
@@ -98,23 +109,20 @@ nav a:hover{
 }
 
 .hero-content{
-    display:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
 
     background:#1e1e1e;
 
     border-radius:15px;
 
     padding:40px;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:40px;
 }
 
-.hero-content.active{
-    display:flex;
+.carousel-item{
+    padding:20px;
 }
 
 .hero-text{
@@ -165,7 +173,7 @@ nav a:hover{
 
 
 /* =========================
-   HERO SECTION
+    HERO SECTION
 ========================= */
 
 .hero{
@@ -285,7 +293,7 @@ nav a:hover{
 }
 
 /* =========================
-   POPULARITY RANKING
+    POPULARITY RANKING
 ========================= */
 
 .ranking-section{

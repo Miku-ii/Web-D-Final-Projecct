@@ -1,6 +1,4 @@
-/* =========================
-    GLOBAL
-========================= */
+/* ========================= GLOBAL ========================= */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +6,8 @@
 }
 
 body {
-    background-color: #070707; /* 👈 确保这里是 #121212，这就变回原来的纯黑色了 */
-    color: white;              /* 文字保持白色 */
+    background-color: #121212 !important; /* 👈 加上 !important，强制所有页面背景死守黑色 */
+    color: white !important;              /* 👈 强制文字死守白色 */
     font-family: Arial, Helvetica, sans-serif;
 }
 

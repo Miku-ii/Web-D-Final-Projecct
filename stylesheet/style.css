@@ -21,52 +21,81 @@ img {
     width: 100%;
 }
 
-/* =========================
-    HEADER
+/* ========================= HEADER ========================= */
+
+/* 1. 网站名称 Logo：原本就是橙色，鼠标放上去也雷打不动保持橙色 */
+header .logo,
+header .logo:link,
+header .logo:visited,
+header .logo:hover,
+header .logo:active {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6b00 !important; /* 👈 永远死守橙色 */
+    text-decoration: none !important;
+    cursor: default; /* 鼠标放上去显示普通指针，强调它是标志而不是普通链接 */
+}
+
+/* 2. 右侧所有网页菜单（包括 Home Page, Subscription page, Log in / Sign up） */
+/* 默认状态：全部死守白色 */
+header nav a, 
+header nav a:link, 
+header nav a:visited,
+header a[href*="login"], /* 额外精准捕捉可能在 nav 外面的 Log in 链接 */
+header a:not(.logo) {  /* 只要不是 logo 的其他 header 链接 */
+    color: #ffffff !important; /* 👈 默认全是白色 */
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+}
+
+/* 悬停状态：鼠标放上去时，才呈现橙色 */
+header nav a:hover, 
+header nav a:active,
+header a:not(.logo):hover {
+    color: #ff6b00 !important; /* 👈 鼠标悬停变橙色 */
+    text-decoration: none !important;
+}
+
+/* 保持你原本的 Header 基础布局布局不动 */
+header {
+    background: #1c1c1c;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    transition: 0.3s;
+}
+/* ========================= 
+        HEADER 修复 
 ========================= */
 
-nav a{
-    color:white;
-    text-decoration:none;
+/* 1. 精准锁定：无论该链接在 header 里的任何角落，都强制其默认为白色 */
+header a, 
+header a:link, 
+header a:visited {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
 }
 
-nav a:hover{
-    color:#ff6b00;
+/* 2. 精准锁定：鼠标悬停在 header 里的任何链接时，100% 变成橙色 */
+header a:hover, 
+header a:active {
+    color: #ff6b00 !important;
+    text-decoration: none !important;
 }
-
-header{
-    background:#1c1c1c;
-    padding:20px 50px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo{
-    font-size:2rem;
-    font-weight:bold;
-    color:#ff6b00;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
-}
-
-nav a{
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#ff6b00;
-}
-
 
 /* =========================
     HERO SECTION

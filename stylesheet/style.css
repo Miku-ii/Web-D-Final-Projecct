@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #121212 !important; /* 👈 加上 !important，强制所有页面背景死守黑色 */
-    color: white !important;              /* 👈 强制文字死守白色 */
+    background-color: #121212 !important; 
+    color: white !important;            
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -21,42 +21,42 @@ img {
     width: 100%;
 }
 
-/* ========================= HEADER 完美对齐与色彩控制 ========================= */
+/* ========================= 
+    HEADER
+========================= */
 
-/* 1. 顶部 Header 容器：开启 Flex 居中 */
 header {
     background: #1c1c1c;
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
-    align-items: center;    /* 👈 确保左、中、右整体在同一水平线 */
+    align-items: center;  
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 80px;           /* 👈 固定一个 Header 高度，让对齐更死板、更精准 */
+    height: 80px;      
 }
 
-/* 2. 核心对齐修复：强行清除 nav ul 带来的所有 Bootstrap 默认内外边距，并强制 Flex 垂直居中 */
 header nav {
     display: flex;
-    align-items: center;    /* 👈 确保导航容器居中 */
+    align-items: center;   
 }
 
 header nav ul {
     display: flex;
     list-style: none;
     gap: 30px;
-    margin: 0 !important;   /* 👈 彻底粉碎 Bootstrap 导致中间菜单往上飘的默认 Margin */
-    padding: 0 !important;  /* 👈 彻底清除内边距 */
-    align-items: center;    /* 👈 确保 ul 内部的 li 和文字完美垂直居中 */
+    margin: 0 !important;   
+    padding: 0 !important;  
+    align-items: center;   
 }
 
 header nav ul li {
     display: flex;
-    align-items: center;    /* 👈 再次确保列表项内部对齐 */
+    align-items: center; 
 }
 
-/* 3. 左侧网站名称 Anime：永久高亮橙色，雷打不动 */
+/* 左侧网站名称 */
 header .logo,
 header .logo:link,
 header .logo:visited,
@@ -69,7 +69,7 @@ header .logo:active {
     cursor: default; 
 }
 
-/* 4. 右侧所有网页菜单链接（默认状态：全白） */
+/* 右侧所有网页菜单链接 */
 header a:not(.logo),
 header nav a, 
 header nav a:link, 
@@ -77,10 +77,10 @@ header nav a:visited {
     color: #ffffff !important; 
     text-decoration: none !important;
     transition: color 0.3s ease;
-    display: inline-block;  /* 👈 转为行内块，保证对齐和基线不乱 */
+    display: inline-block; 
 }
 
-/* 5. 右侧所有网页菜单链接（悬停状态：变橙色） */
+/* 右侧所有网页菜单链接 */
 header a:not(.logo):hover,
 header a:not(.logo):active,
 header nav a:hover, 
@@ -93,140 +93,80 @@ header nav a:active {
     HERO SECTION
 ========================= */
 
-a{
-    color: white;
-    text-decoration: none;
-}
-
-a:hover{
-    color: #ff6b00;
-}
-
 .hero-section{
     width:90%;
     margin:40px auto;
 }
 
-.hero-buttons button{
+/* 整个轮播背景 */
+.carousel-inner{
     background:#1e1e1e;
-    color:white;
-
-    border:none;
-
-    padding:12px 25px;
-
-    border-radius:8px;
-
-    cursor:pointer;
-
-    transition:0.3s;
+    border-radius:15px;
 }
 
-.hero-buttons button:hover{
-    background:#ff6b00;
+/* 每一页 */
+.carousel-item{
+    padding:40px 70px;
 }
 
-.hero-content{
+/* 左文字 + 右视频 */
+.hero-main-content.hero-main-content{
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:40px;
-
-    background:#1e1e1e;
-
-    border-radius:15px;
-
-    padding:40px;
+    width:100%;
+    min-width:100%;
+    gap:50px;
 }
 
-.carousel-item{
-    padding:20px;
-}
-
+/* 左边文字 */
 .hero-text{
+    width:350px;
+    flex-shrink:0;
+}
+
+/* 右边视频 */
+.hero-video{
     flex:1;
 }
 
 .hero-text h1{
-    font-size:3rem;
+    font-size:4rem;
     margin-bottom:20px;
 }
 
 .hero-text p{
     font-size:1.1rem;
     line-height:1.8;
-    margin-bottom:30px;
-}
-
-.watch-btn{
-    display:inline-block;
-
-    background:#ff6b00;
-
-    color:white;
-
-    padding:15px 30px;
-
-    border-radius:8px;
-
-    transition:0.3s;
-}
-
-.watch-btn:hover{
-    background:#ff8c33;
-}
-
-.hero-video{
-    flex:1;
 }
 
 .hero-video video{
     width:100%;
     height:400px;
-
     object-fit:cover;
-
     border-radius:15px;
+    display:block;
+}
+
+/* 左右箭头 */
+
+.carousel-control-prev,
+.carousel-control-next{
+    width:5%;
+}
+
+/* 指示器 */
+
+.carousel-indicators{
+    margin-bottom:15px;
+}
+
+/* 关闭自动轮播动画 */
+
+.carousel{
+    pointer-events:auto;
 }
 
 
-/* =========================
-    HERO SECTION
-========================= */
-
-.hero{
-    height:80vh;
-
-    background-image:url("images/banner.jpg");
-    background-size:cover;
-    background-position:center;
-
-    position:relative;
-
-    display:flex;
-    align-items:center;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-
-    background:rgba(0,0,0,0.6);
-}
-
-.hero-main-content{
-    position:relative;
-    z-index:1;
-
-    padding-left:80px;
-    max-width:600px;
-}
-
-.hero-main-content h1{
-    font-size:4rem;
-    margin-bottom:20px;
-}
 /* =========================
     TITLES
 ========================= */
@@ -251,7 +191,7 @@ a:hover{
     gap:25px;
 }
 
-/* 核心修复：精准补上当 .anime-card 外面包裹了 <a> 标签后的链接块级容器声明 */
+/* .anime-card 外面包裹了 <a> 标签后的链接块级容器声明 */
 .recommended-grid > a {
     display: block;
     text-decoration: none;
@@ -266,7 +206,7 @@ a:hover{
 
     border-radius:12px;
     cursor:pointer;
-    width: 100%; /* 确保填满链接容器 */
+    width: 100%; 
 }
 
 .anime-card img{
@@ -329,7 +269,6 @@ a:hover{
     background:#1f1f1f;
     border-radius:12px;
     overflow:hidden;
-
     transition:0.3s;
     cursor:pointer;
 }
@@ -360,22 +299,17 @@ a:hover{
 
 
 /* =========================
-   FEATURED ANIME
+    FEATURED ANIME
 ========================= */
 
 .featured-show{
 
     width:90%;
     margin:80px auto;
-
     display:flex;
-
     background:#1a1a1a;
-
     border-radius:20px;
-
     overflow:hidden;
-
     position:relative;
 }
 
@@ -459,7 +393,7 @@ a:hover{
 
 
 /* =========================
-   MORE RECOMMENDATIONS
+    MORE RECOMMENDATIONS
 ========================= */
 
 .featured-anime{
@@ -528,7 +462,7 @@ a:hover{
 
 
 /* =========================
-   FOOTER
+    FOOTER
 ========================= */
 
 footer{
@@ -547,7 +481,7 @@ footer p{
 
 
 /* =========================
-   ANIME DETAIL PAGE
+    ANIME DETAIL PAGE
 ========================= */
 
 .detail-banner{
@@ -580,7 +514,7 @@ footer p{
 }
 
 /* =========================
-   BUTTONS
+    BUTTONS
 ========================= */
 
 .btn{
@@ -601,7 +535,7 @@ footer p{
 }
 
 /* =========================
-   RESPONSIVE
+    RESPONSIVE
 ========================= */
 
 @media (max-width:1200px){
@@ -669,7 +603,9 @@ footer p{
 
 
 
-
+/* ========================
+    ANIME DETAIL IMG
+   ====================== */
 
 .anime-detail{
     width:100%;
@@ -771,11 +707,11 @@ footer p{
 
 
 
-/* ==========================================================================
-   5. 订阅页特定样式
-   ========================================================================== */
+/* ===========================
+    订阅页特定样式
+   ======================= */
 
-/* 订阅页专属大白衬底外框 */
+
 .sub-page-outer-box {
     max-width: 1100px;
     margin: 50px auto;
@@ -803,7 +739,6 @@ footer p{
     flex-wrap: wrap;
 }
 
-/* 每一个 Subscription 计划的独立卡片（完美还原直角骨架风格） */
 .sub-page-outer-box .sub-plan-card {
     background: #ffffff;
     border: 1px solid #c0c0c0;
@@ -815,7 +750,7 @@ footer p{
     text-align: center;
 }
 
-/* 滑过卡片时的微妙浮动与加深边框效果（满足 Hover 互动标准） */
+/* 滑过卡片时的微妙浮动与加深边框效果 */
 .sub-page-outer-box .sub-plan-card:hover {
     transform: translateY(-4px);
     border-color: #666666;
@@ -852,7 +787,7 @@ footer p{
     line-height: 1.5;
 }
 
-/* 订阅页专属直角灰色按钮（绝对不和首页任何按钮冲突） */
+/* 订阅页专属直角灰色按钮 */
 .sub-page-outer-box .btn-subscribe {
     background-color: #f0f0f0;
     color: #333333;

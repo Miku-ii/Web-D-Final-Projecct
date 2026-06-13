@@ -723,7 +723,42 @@ footer p{
     color: #cccccc !important;
 }
 
+/* ===================
+    Back 按钮样式 
+=================== */
 
+.back-btn {
+    position: absolute;    
+    top: 40px;            
+    left: 40px;  
+    z-index: 9999;   
+    
+    background: rgba(0, 0, 0, 0.6); 
+    color: #ffffff !important;  
+    padding: 12px 24px;   
+    border-radius: 30px; 
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none !important; 
+    
+    display: inline-flex;   /* 开启 Flex 让左箭头和 Back 文字完美对齐 */
+    align-items: center;
+    gap: 8px;           
+    border: 1px solid rgba(255, 255, 255, 0.25); 
+    transition: all 0.3s ease; 
+}
+
+/* 鼠标放上去（Hover）时的视觉效果 */
+.back-btn:hover {
+    background: #ff6b00 !important;  
+    border-color: #ff6b00 !important;
+    color: #ffffff !important; 
+    transform: translateX(-4px); 
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+}
+.back-btn .glyphicon {
+    color: #ffffff !important;
+}
 
 
 /* ===========================

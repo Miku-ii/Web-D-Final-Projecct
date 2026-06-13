@@ -185,7 +185,6 @@ header nav a:active {
 .recommended-grid{
     width:90%;
     margin:auto;
-
     display:grid;
     grid-template-columns:repeat(5,1fr);
     gap:25px;
@@ -703,6 +702,25 @@ footer p{
 
 .description{
     line-height:1.8;
+}
+
+
+/* 修复动漫卡片内所有文字颜色 */
+.recommended-grid a,
+.recommended-grid a:link,
+.recommended-grid a:visited,
+.recommended-grid a:hover,
+.recommended-grid a:active {
+    color: inherit !important; 
+    text-decoration: none;
+}
+
+.anime-card .overlay h3 {
+    color: #ff6b00 !important; 
+}
+
+.anime-card .overlay p {
+    color: #cccccc !important;
 }
 
 

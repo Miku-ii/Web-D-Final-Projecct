@@ -721,29 +721,30 @@ footer p{
     color: #ffffff !important;
 }
 
+header {
+    background: #000000 !important;
+}
 
-/* ===========================
+
+/* =========================== 
     订阅页特定样式
-   ======================= */
-
-
+======================= */
 .sub-page-outer-box {
     max-width: 1100px;
     margin: 50px auto;
-    background: #ffffff;
-    border: 1px solid #dcdcdc;
+    background: #1a1a1a !important;
+    border: 2px solid #ff6b00 !important; 
     border-radius: 12px;
     padding: 50px 40px;
     box-sizing: border-box;
     text-align: center;
 }
 
-/* 页面大标题 */
 .sub-page-outer-box h1 {
     font-size: 36px;
     margin-bottom: 40px;
     font-weight: normal;
-    color: #000000;
+    color: #ffffff !important;         
 }
 
 /* 卡片横向并排的 Flexbox 容器 */
@@ -754,40 +755,39 @@ footer p{
     flex-wrap: wrap;
 }
 
+/* 内部两个计划卡片*/
 .sub-page-outer-box .sub-plan-card {
-    background: #ffffff;
-    border: 1px solid #c0c0c0;
+    background: #ff6b00 !important;      
+    border: 1px solid #ff6b00 !important;
     border-radius: 8px;
     padding: 40px 30px;
     width: 280px;
     box-sizing: border-box;
-    transition: transform 0.2s ease, border-color 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.2s;
     text-align: center;
 }
 
-/* 滑过卡片时的微妙浮动与加深边框效果 */
+/* 滑过卡片时的浮动效果 */
 .sub-page-outer-box .sub-plan-card:hover {
-    transform: translateY(-4px);
-    border-color: #666666;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4); 
 }
 
-/* 卡片内动漫方案名字 */
 .sub-page-outer-box .sub-plan-card h2 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #000000;
-    font-weight: 600;
+    color: #000000 !important; 
+    font-weight: bold;
 }
 
-/* 价格字体 */
 .sub-page-outer-box .sub-plan-card .price {
     font-size: 28px;
     font-weight: bold;
-    color: #000000;
+    color: #000000 !important;
     margin-bottom: 20px;
 }
 
-/* 服务特权无序列表排版 */
+/* 特权列表排版 */
 .sub-page-outer-box .sub-plan-card ul {
     list-style: none;
     padding: 0;
@@ -796,26 +796,26 @@ footer p{
 }
 
 .sub-page-outer-box .sub-plan-card ul li {
-    font-size: 14px;
-    color: #555555;
-    margin-bottom: 10px;
+    font-size: 15px;
+    color: #ffffff !important;           
+    margin-bottom: 12px;
     line-height: 1.5;
 }
 
-/* 订阅页专属直角灰色按钮 */
 .sub-page-outer-box .btn-subscribe {
-    background-color: #f0f0f0;
-    color: #333333;
-    border: 1px solid #b5b5b5;
-    padding: 10px 24px;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    padding: 12px 24px;
     font-size: 14px;
-    border-radius: 4px;
+    font-weight: bold;
+    border-radius: 6px;
     cursor: pointer;
     width: 100%;
     transition: all 0.2s ease;
 }
 
 .sub-page-outer-box .btn-subscribe:hover {
-    background-color: #e2e2e2;
-    border-color: #888888;
+    background-color: #e5e5e5 !important;
+    transform: scale(1.02);
 }

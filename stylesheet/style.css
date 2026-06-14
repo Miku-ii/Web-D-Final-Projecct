@@ -51,7 +51,7 @@ header nav ul li {
     align-items: center;
 }
 
-/* 左侧网站名称 */
+/* Website name on the left */
 header .logo,
 header .logo:link,
 header .logo:visited,
@@ -64,7 +64,7 @@ header .logo:active {
     cursor: default;
 }
 
-/* 右侧所有网页菜单链接 */
+/* Right-side navigation links */
 header a:not(.logo),
 header nav a,
 header nav a:link,
@@ -91,18 +91,18 @@ header nav a:active {
     margin: 40px auto;
 }
 
-/* 整个轮播背景 */
+/* The entire carousel background */
 .carousel-inner {
     background: #151515;
     border-radius: 15px;
 }
 
-/* 每一页 */
+/* Each slide */
 .carousel-item {
     padding: 40px 70px;
 }
 
-/* 左文字 + 右视频 */
+/* Left text + Right video */
 .hero-main-content.hero-main-content {
     display: flex;
     align-items: center;
@@ -111,13 +111,13 @@ header nav a:active {
     gap: 50px;
 }
 
-/* 左边文字 */
+/* Left text */
 .hero-text {
     width: 350px;
     flex-shrink: 0;
 }
 
-/* 右边视频 */
+/* Right video */
 .hero-video {
     flex: 1;
 }
@@ -138,18 +138,18 @@ header nav a:active {
     display: block;
 }
 
-/* 左右箭头 */
+/* Left and right arrows */
 .carousel-control-prev,
 .carousel-control-next {
     width: 5%;
 }
 
-/* 指示器 */
+/* Indicators */
 .carousel-indicators {
     margin-bottom: 15px;
 }
 
-/* 关闭自动轮播动画 */
+/* Turn off automatic carousel animation. */
 .carousel {
     pointer-events: auto;
 }
@@ -173,7 +173,7 @@ header nav a:active {
     gap: 25px;
 }
 
-/* .anime-card 外面包裹了 <a> 标签后的链接块级容器 */
+/* The .anime-card is wrapped in a block-level container containing links following the <a> tag. */
 .recommended-grid > a {
     display: block;
     text-decoration: none;
@@ -269,7 +269,7 @@ header nav a:active {
     position: relative;
 }
 
-/* 左边图片 */
+/* Left-side image */
 .featured-image {
     width: 55%;
     position: relative;
@@ -281,7 +281,7 @@ header nav a:active {
     display: block;
 }
 
-/* 渐变过渡 */
+/* Gradient transition */
 .featured-image::after {
     content: "";
     position: absolute;
@@ -292,7 +292,7 @@ header nav a:active {
     background: linear-gradient(to right, rgba(26, 26, 26, 0), rgba(26, 26, 26, 1));
 }
 
-/* 右边文字 */
+/* Right-side text */
 .featured-info {
     width: 45%;
     padding: 60px 50px;
@@ -560,7 +560,7 @@ nav ul {
     line-height: 1.8;
 }
 
-/* 修复动漫卡片内所有文字颜色 */
+/* Fixed the color of all text within anime cards */
 .recommended-grid a,
 .recommended-grid a:link,
 .recommended-grid a:visited,
@@ -577,7 +577,7 @@ nav ul {
 }
 
 /* =================== 
-    Back 按钮样式 
+    Back button styles
 =================== */
 .back-btn {
     position: absolute;
@@ -610,7 +610,7 @@ nav ul {
 }
 
 /* =========================== 
-    订阅页特定样式 
+    Subscription page specific styles 
 ======================= */
 .sub-page-outer-box {
     max-width: 1100px;
@@ -629,7 +629,7 @@ nav ul {
     color: #ffffff !important;
 }
 
-/* 卡片横向并排的 Flexbox 容器 */
+/* Flexbox container with cards arranged horizontally side by side */
 .sub-page-outer-box .sub-cards-flex {
     display: flex;
     justify-content: center;
@@ -695,7 +695,7 @@ nav ul {
 }
 
 /* ======================== 
-    手机适配媒体查询 
+    Mobile phone compatibility media search
 ======================== */
 @media (max-width: 768px) {
     .detail-overlay {

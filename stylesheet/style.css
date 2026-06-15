@@ -385,6 +385,17 @@ footer a:hover {
     color: white;
 }
 
+#social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 16px;
+    gap: 16px;
+}
+#social-links img {
+    width: 32px;
+}
+
 /* ========================= 
     ANIME DETAIL PAGE 
 ========================= */
